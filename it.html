@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Replica</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* White background for the whole page */
+            border-radius: 15px; /* Rounded corners for the whole page */
+        }
+
+        .hero-section {
+            background: url('https://www.w3schools.com/w3images/mountains.jpg') no-repeat center center/cover;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 80px 0;
+            height: 100vh;
+            border-radius: 15px 15px 0 0; /* Rounded top corners for the hero section */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-text {
+            margin-left: 30px;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #ffffff; /* Blue color for heading */
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+        }
+
+        /* Form Styling */
+        .form-container {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px; /* Rounded corners for the form */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-container h3 {
+            margin-bottom: 20px;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-container button {
+            background-color: brown; /* Brown button */
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .form-container button:hover {
+            background-color: #5a2e12; /* Darker brown on hover */
+        }
+
+        /* Transparent Navbar Styling */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            z-index: 10;
+        }
+
+        /* Navbar Logo */
+        .navbar .navbar-brand {
+            color: #000000; /* White color for the logo */
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Navbar Links Color */
+        .navbar .navbar-nav .nav-link {
+            color: #003366; /* Dark blue color for navbar links */
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #001f3d; /* Darker shade of blue on hover */
+        }
+
+        .navbar .navbar-text {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        .animate__animated {
+            animation-duration: 1s;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            padding: 20px 0;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Custom text color styles */
+        .join {
+            color: brown;
+        }
+
+        .waiting-list {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- Left Side Navbar Links -->
+            <div class="navbar-nav d-flex">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Floorplans</a>
+                <a class="nav-link" href="#">Features</a>
+            </div>
+            
+            <!-- Center Logo -->
+            <a class="navbar-brand mx-auto" href="#">The Reserve at Ochoco</a>
+
+            <!-- Right Side Text -->
+            <div class="navbar-text">
+                Prineville, Oregon
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section with Animation -->
+    <header class="hero-section text-white">
+        <div class="hero-text">
+            <h1 class="display-4 animate__animated animate__fadeIn">The Reserve At Ochoco</h1>
+            <p class="lead animate__animated animate__fadeIn animate__delay-1s">The Reserve At Ochoco Is A Stunning Living Community In Prineville Oregon. Discover the simplicity of modern living.</p>
+            <a href="#services" class="btn btn-primary btn-lg animate__animated animate__fadeIn animate__delay-2s">Explore</a>
+        </div>
+
+        <!-- Form Container (on the right side) -->
+        <div class="form-container">
+            <h3><span class="join">JOIN</span> <span class="waiting-list">Our Waiting List</span></h3>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <select name="interest" required>
+                    <option value="" disabled selected>What are you interested in?</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit">Send Request</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">About Us</h2>
+            <p>We offer an exclusive experience blending luxury and nature. Discover a new world at The Reserve.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350" class="card-img-top" alt="Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 1</h5>
+                            <p class="card-text">Description of service 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350" class="card-img-top" alt="Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 2</h5>
+                            <p class="card-text">Description of service 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350" class="card-img-top" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 3</h5>
+                            <p class="card-text">Description of service 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 The Reserve. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></script>
+</body>
+
+</html>
